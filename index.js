@@ -17,6 +17,11 @@ app.get('/', function(req,res){
 res.render('home', contexto);
 });
 
+app.post('/login', function(req, res){
+console.log('holaa');
+res.send('hola');
+});
+
 
 
 
