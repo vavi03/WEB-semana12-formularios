@@ -6,11 +6,16 @@ var app=express();
 
 app.use(express.static('public'));
 //registrar motor render 
-app.engine('handlebars', exphns());
+app.engine('handlebars', exphbs());
 //motor render es handlebars
 app.set('view engine','handlebars');
 
-
+app.get('/', function(req,res){
+    var contexto={
+    titulo: 'pagina principal',
+    };
+res.render('home', contexto);
+});
 
 
 
